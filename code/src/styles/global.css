@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  /* Cores da Paleta */
+  --color-my-black: #0a0a0a; /* Eerie Black */
+  --color-my-white: #ffffff; /* Texto Principal */
+  --color-my-gray: #9ca3af; /* Gray-400 */
+  --color-my-blue: #3b82f6; /* Blue-500 (Accent) */
+  --color-my-border: #262626; /* Neutral-800 */
+}
+
+@layer base {
+  body {
+    @apply bg-my-black text-my-white antialiased;
+  }
+}
+
+@layer components {
+  /* Abstração da estrutura do Container */
+  .container-main {
+    @apply max-w-7xl mx-auto px-8;
+  }
+}
