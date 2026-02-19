@@ -35,7 +35,7 @@ Unidade, Tailwind Class, Uso Comum
 16px, p-4/gap-4, Entre elementos relacionados.
 32px, p-8/gap-8, Padding interno de cards.
 64px, py-16/gap-16, Espaço entre seções menores.
-96px, y-24, Espaço entre grandes seções (como Hero).
+96px, py-24, Espaço entre grandes seções (como Hero).
 
 ## Estrutura e layout
 

@@ -18,6 +18,9 @@
 @layer components {
   /* Abstração da estrutura do Container */
   .container-main {
-    @apply max-w-7xl mx-auto px-8;
+    @apply max-w-7xl mx-auto py-24 px-4 md:px-8;
+  }
+  .button {
+    @apply w-fit p-2 rounded-lg leading-relaxed cursor-pointer select-none md:px-4;
   }
 }

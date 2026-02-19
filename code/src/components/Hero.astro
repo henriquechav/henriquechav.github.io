@@ -1,19 +1,29 @@
-<section class="container-main min-h-[90vh] py-24 flex flex-col items-center justify-between gap-16 md:flex-row lg:gap-32">
+<section class="container-main min-h-[90vh] flex flex-col items-center justify-between gap-16 md:flex-row">
 
-  <div class="shrink-0 order-last md:order-0">
+  <div class="shrink-0 order-last relative flex items-center justify-center md:order-0">
+    <div class="absolute -z-10 -inset-1 blur-xl -translate-x-2 translate-y-4 bg-my-blue/12 md:-translate-x-8 md:-translate-y-8"></div>
     <img 
-      src="/foto-perfil.png" alt="Selfie do Henrique vestindo camiseta preta."
-      class="w-72 h-96 rounded-3xl object-cover grayscale shadow-2xl lg:w-md lg:h-140"
+      src="/foto-perfil.png" alt="Selfie em preto e branco do Henrique usando camiseta preta."
+      class="w-72 h-96 rounded-3xl object-cover grayscale lg:w-md lg:h-140"
     />
   </div>
 
-  <div class="flex-1 space-y-8 text-left">
+  <div class="flex-1 flex flex-col items-center gap-8 text-center md:items-baseline md:text-left">
     <h1 class="text-6xl leading-[1.1] font-bold tracking-tighter md:text-7xl lg:text-8xl">
-      Olá, eu sou Henrique.
+      Olá, sou o Henrique!
     </h1>
     <p class="text-xl leading-relaxed max-w-lg text-my-gray md:text-2xl">
-      Estudante de computação criando produtos digitais.
+      Um estudante de computação com foco em criar soluções digitais para problemas complexos.
     </p>
+    <div class="flex gap-4 text-lg md:text-xl">
+      <a href="/HenriqueChavesLopesCV.pdf" target="_blank" 
+      class="button w-fit border-2 border-my-gray text-my-gray">
+        Ver currículo
+      </a>
+      <a href="#" class="button w-fit font-bold bg-my-blue">
+        Meus projetos
+      </a>
+    </div>
   </div>
 
 </section>
