@@ -6,18 +6,24 @@ const projects = [
     link: "https://github.com/henriquechav/henriquechav.github.io",
     image: "/portfolio-thumb.png",
   },
+  {
+    title: "Euzinho",
+    description: "Eu mesmo como projeto para testar o funcionamento dos cards.",
+    link: "#",
+    image: "/foto-perfil.png",
+  },
 ];
 ---
 
 <section class="container-main">
-  <h2 class="section-title">
+  <h2 class="section-title mb-8">
     Meus Projetos
   </h2>
 
-  <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2 lg:grid-cols-3">
     {projects.map((project) => (
-      <article>
-        <div>
+      <article class="rounded-3xl border-2 border-my-border overflow-hidden">
+        <div class="aspect-video">
           <img 
             src={project.image}
             alt={project.title}
@@ -25,12 +31,12 @@ const projects = [
           />
         </div>
 
-        <div>
-          <h3>{project.title}</h3>
+        <div class="p-4">
+          <h3 class="text-xl mb-2 font-bold">{project.title}</h3>
 
-          <p>{project.description}</p>
+          <p class="text-sm mb-4 leading-relaxed text-my-gray">{project.description}</p>
 
-          <a href={project.link}>Ver projeto</a>
+          <a href={project.link} class="font-semibold text-my-blue">Ver projeto</a>
         </div>
       </article>
     ))}
