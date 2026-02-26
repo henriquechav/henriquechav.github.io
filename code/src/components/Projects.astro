@@ -1,16 +1,20 @@
 ---
+import { Image } from "astro:assets";
+import tongueimg from "../assets/tongue-thumb.png";
+import questifyimg from "../assets/questify-thumb.png";
+
 const projects = [
   {
-    title: "Meu Portfólio",
-    description: "Um site simples feito em Astro para mostrar meus projetos em tech.",
-    link: "https://github.com/henriquechav/henriquechav.github.io",
-    image: "/portfolio-thumb.png",
+    title: "Tongue",
+    description: "Site de aprendizagem de inglês com backend em PHP. Projeto refatorado do meu curso técnico.",
+    link: "https://github.com/henriquechav/tongue",
+    image: tongueimg,
   },
   {
-    title: "Euzinho",
-    description: "Eu mesmo como projeto para testar o funcionamento dos cards.",
-    link: "#",
-    image: "/foto-perfil.png",
+    title: "Questify",
+    description: "Gerenciador de tarefas com persistência de dados local feito com JavaScript puro.",
+    link: "https://github.com/henriquechav/questify",
+    image: questifyimg,
   },
 ];
 ---
@@ -24,10 +28,10 @@ const projects = [
     {projects.map((project) => (
       <article class="rounded-3xl border-2 border-my-border overflow-hidden">
         <div class="aspect-video">
-          <img 
+          <Image 
             src={project.image}
             alt={project.title}
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover opacity-80"
           />
         </div>
 
@@ -36,49 +40,9 @@ const projects = [
 
           <p class="text-sm mb-4 leading-relaxed text-my-gray">{project.description}</p>
 
-          <a href={project.link} class="font-semibold text-my-blue">Ver projeto</a>
+          <a href={project.link} target="_blank" class="font-semibold text-my-blue">Ver projeto</a>
         </div>
       </article>
     ))}
   </div>
 </section>
-
-<!-- <section class="py-20 px-4 max-w-6xl mx-auto">
-  <h2 class="text-3xl font-bold mb-10 text-slate-800 dark:text-white">
-    Projetos em Destaque
-  </h2>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {projects.map((project) => (
-      <article class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
-        
-        <div class="aspect-video overflow-hidden">
-          <img 
-            src={project.image} 
-            alt={project.title} 
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          />
-        </div>
-
-        <div class="p-6">
-          
-          <h3 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">
-            {project.title}
-          </h3>
-          
-          <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
-            {project.description}
-          </p>
-
-          <a 
-            href={project.link} 
-            class="inline-flex items-center text-blue-600 font-semibold hover:underline"
-          >
-            Ver Projeto 
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </a>
-        </div>
-      </article>
-    ))}
-  </div>
-</section> -->
