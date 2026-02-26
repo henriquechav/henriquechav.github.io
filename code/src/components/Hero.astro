@@ -1,9 +1,14 @@
+---
+import { Image } from "astro:assets";
+import profilePic from "../assets/foto-perfil.png";
+---
+
 <section class="container-main min-h-[90vh] flex flex-col items-center justify-between gap-16 md:flex-row">
 
   <div class="shrink-0 order-last relative flex items-center justify-center md:order-0">
     <div class="absolute -z-10 -inset-1 blur-xl -translate-x-2 translate-y-4 bg-my-blue/12 md:-translate-x-8 md:-translate-y-8"></div>
-    <img 
-      src="/foto-perfil.png" alt="Selfie em preto e branco do Henrique usando camiseta preta."
+    <Image 
+      src={profilePic} alt="Selfie em preto e branco do Henrique usando camiseta preta."
       class="w-72 h-96 rounded-3xl object-cover grayscale lg:w-md lg:h-140"
     />
   </div>
