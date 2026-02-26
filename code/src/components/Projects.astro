@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import tongueimg from "../assets/tongue-thumb.png";
+import questifyimg from "../assets/questify-thumb.png";
+
+const projects = [
+  {
+    title: "Tongue",
+    description: "Site de aprendizagem de inglês com backend em PHP. Projeto refatorado do meu curso técnico.",
+    link: "https://github.com/henriquechav/tongue",
+    image: tongueimg,
+  },
+  {
+    title: "Questify",
+    description: "Gerenciador de tarefas com persistência de dados local feito com JavaScript puro.",
+    link: "https://github.com/henriquechav/questify",
+    image: questifyimg,
+  },
+];
+---
+
+<section class="container-main" id="meus-projetos">
+  <h2 class="section-title mb-8">
+    Meus Projetos
+  </h2>
+
+  <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {projects.map((project) => (
+      <article class="rounded-3xl border-2 border-my-border overflow-hidden">
+        <div class="aspect-video">
+          <Image 
+            src={project.image}
+            alt={project.title}
+            class="w-full h-full object-cover opacity-80"
+          />
+        </div>
+
+        <div class="p-4">
+          <h3 class="text-xl mb-2 font-bold">{project.title}</h3>
+
+          <p class="text-sm mb-4 leading-relaxed text-my-gray">{project.description}</p>
+
+          <a href={project.link} target="_blank" class="font-semibold text-my-blue">Ver projeto</a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

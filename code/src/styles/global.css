@@ -20,6 +20,9 @@
   .container-main {
     @apply max-w-7xl mx-auto py-24 px-4 md:px-8;
   }
+  .section-title {
+    @apply text-3xl text-center font-bold tracking-tighter md:text-4xl lg:text-5xl;
+  }
   .button {
     @apply w-fit p-2 rounded-lg leading-relaxed cursor-pointer select-none md:px-4;
   }
